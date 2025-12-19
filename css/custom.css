@@ -9,3 +9,55 @@
 #top-img {
   background: rgba(0,0,0,0.3) !important;
 }
+/* 通用按钮样式：调整布局，预留图标位置 */
+.button-group .btn {
+  position: relative;
+  padding-left: 30px; /* 给图标留空间 */
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+/* 小圆球+自定义图标：GitHub按钮 */
+.btn-github::before {
+  content: "";
+  position: absolute;
+  left: 5px;  /* 图标位置 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;  /* 图标尺寸 */
+  height: 20px;
+  /* 叠加自定义GitHub图标 */
+  background: 
+    url(/images/icon/github-icon.jpg) no-repeat center/contain;
+}
+
+/* QQ邮箱按钮 */
+.btn-email::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: 
+    url(/images/icon/qq-email-icon.png) no-repeat center/contain;
+}
+
+/* B站按钮 */
+.btn-bilibili::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: 
+    url(/images/icon/bilibili-icon.jpg) no-repeat center/contain;
+}
+
+/* 隐藏默认的空图标（可选） */
+.button-group .btn i {
+  display: none;
+}
